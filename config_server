@@ -1,0 +1,14 @@
+server:
+  port: 7878
+
+spring:
+  application:
+    name: CONFIGSERVER
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+    config:
+      server:
+        git:
+          uri: https://github.com/zl15235210226/configs.git
