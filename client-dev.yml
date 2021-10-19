@@ -1,0 +1,21 @@
+server:
+  port: 7878
+
+spring:
+  application:
+    name: CONFIGCLIENT
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500													#指定拉取配置文件的环境
+    config:
+      discovery:
+        enabled: true  #开启统一配置中心服务
+        service-id: CONFIGSERVER #指定统一配置服务中心的服务唯一标识
+      label: main
+      #指定从仓库的那个分支拉取配置
+      name: client
+      #指定拉取配置文件的名称
+      profile: dev
+      #指定拉取配置文件的环境
